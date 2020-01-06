@@ -13,9 +13,11 @@
 
     <%- include('partials/header') %>
 
-    <h1>Vos Jeux</h1>
+    <h1><%= title %></h1>
     <div>
-        Première version !
+        <% for(movie of movies) { %>
+            <div><%= movie.title %> <%= movie.year %></div>
+        <% } %>
     </div>
 
 </div>

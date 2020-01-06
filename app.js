@@ -9,7 +9,17 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.get('/movies', (req, res) => {
-   res.render('movies');
+
+    const titleApp = 'Meilleurs Films : ';
+
+    const listMovies = [
+        { title: 'Terminator', year: 1987 },
+        { title: 'Star Wars', year: 1979 },
+        { title: 'Indiana Jones', year: 1984 },
+        { title: 'Matrix', year: 1999 }
+    ];
+
+   res.render('movies', { movies: listMovies, title: titleApp });
 });
 
 app.get('/movies/:id/:titre', (req, res) => {
