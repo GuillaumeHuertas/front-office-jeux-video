@@ -9,10 +9,20 @@
     <link rel="stylesheet" href="../public/style.css"/>
 </head>
 <body>
-<h1>Détails</h1>
-<div>
-    Première version !
+<div class="central">
+
+    <%- include('partials/header') %>
+
+    <h1>Détails de <%= titrefilm %></h1>
+    <div>
+
+
+        <%= movieid %>
+
+    </div>
+
 </div>
 
+<%- include('partials/footer') %>
 </body>
 </html>

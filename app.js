@@ -12,8 +12,10 @@ app.get('/movies', (req, res) => {
    res.render('movies');
 });
 
-app.get('/movie-detail', (req, res) => {
-    res.render('movie-detail');
+app.get('/movies/:id/:titre', (req, res) => {
+    const id = req.params.id;
+    const titre = req.params.titre;
+    res.render('movie-detail', { movieid: id, titrefilm: titre });
 });
 
 app.get('/', (req, res) =>{
