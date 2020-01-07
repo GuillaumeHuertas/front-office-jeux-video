@@ -1,9 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 
 const PORT = 3000;
 
 app.use('/public', express.static('public'));
+// app.use(bodyParser.urlencoded({ extended: false }));
+
+
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -20,6 +24,13 @@ app.get('/movies', (req, res) => {
     ];
 
    res.render('movies', { movies: listMovies, title: titleApp });
+});
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+app.post('/movies', urlencodedParser, (req, res) => {
+    console.log(req.body);
+    res.sendStatus(201);
 });
 
 app.get('/movies/:id/:titre', (req, res) => {
