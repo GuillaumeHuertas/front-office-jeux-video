@@ -4,8 +4,6 @@
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/movies.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/movies.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578331921336</updated>
       <workItem from="1578331922541" duration="9587000" />
-      <workItem from="1578380424206" duration="1389000" />
+      <workItem from="1578380424206" duration="2620000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -133,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578354280360</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajout formulaire Movies">
+      <created>1578381903789</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578381903789</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,37 +151,38 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Div NavBar OK" />
     <MESSAGE value="Ajout fonctions aux ejs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout fonctions aux ejs" />
+    <MESSAGE value="Ajout formulaire Movies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout formulaire Movies" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578332942915">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578332942915" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578354280069">
+    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578381903460">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578354280069" />
+    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578381903460" />
     <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1578352772793">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1743" y="112" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1578352772793" />
-    <state width="1234" height="167" key="GridCell.Tab.0.bottom" timestamp="1578381831860">
+    <state width="1234" height="167" key="GridCell.Tab.0.bottom" timestamp="1578383169070">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="167" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1578381831860" />
-    <state width="1234" height="167" key="GridCell.Tab.0.center" timestamp="1578381831860">
+    <state width="1234" height="167" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1578383169070" />
+    <state width="1234" height="167" key="GridCell.Tab.0.center" timestamp="1578383169070">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="167" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1578381831860" />
-    <state width="1234" height="167" key="GridCell.Tab.0.left" timestamp="1578381831860">
+    <state width="1234" height="167" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1578383169070" />
+    <state width="1234" height="167" key="GridCell.Tab.0.left" timestamp="1578383169070">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="167" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1578381831860" />
-    <state width="1234" height="167" key="GridCell.Tab.0.right" timestamp="1578381831860">
+    <state width="1234" height="167" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1578383169070" />
+    <state width="1234" height="167" key="GridCell.Tab.0.right" timestamp="1578383169070">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="167" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1578381831860" />
+    <state width="1234" height="167" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1578383169070" />
     <state x="1464" y="0" key="SettingsEditor" timestamp="1578352800856">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

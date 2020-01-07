@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const PORT = 3000;
+let listMovies = [];
 
 app.use('/public', express.static('public'));
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,7 +17,7 @@ app.get('/movies', (req, res) => {
 
     const titleApp = 'Meilleurs Films : ';
 
-    const listMovies = [
+    listMovies = [
         { title: 'Terminator', year: 1987 },
         { title: 'Star Wars', year: 1979 },
         { title: 'Indiana Jones', year: 1984 },
@@ -29,7 +30,14 @@ app.get('/movies', (req, res) => {
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.post('/movies', urlencodedParser, (req, res) => {
-    console.log(req.body);
+    console.log(`Titre du film : ${req.body.movietitle}`);
+    console.log(`Année de sortie : ${req.body.movieyear}`);
+    const newMovie = { title: req.body.movietitle, year: req.body.movieyear };
+    // Ancienne méthode
+    // listMovies.push(newMovie);
+    // Créé un nouveau tableau suivi du nouvel élément
+    listMovies = [...listMovies, newMovie];
+    console.log(listMovies);
     res.sendStatus(201);
 });
 
