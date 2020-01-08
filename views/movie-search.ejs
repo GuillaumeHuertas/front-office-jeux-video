@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!--    <meta name="viewport"-->
+    <!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>JeuxVideo</title>
+    <link rel="stylesheet" href="../public/style.css"/>
+</head>
+<body>
+<div class="central">
+
+    <%- include('partials/header') %>
+
+    <h1>Votre Recherche sur <em>The Movie Database</em></h1>
+
+    <div>
+        <input type="text" name="term" id="term" placeholder="titre de film">
+        <button id="btnSearch">chercher</button>
+    </div>
+
+    <div id="result">
+
+
+    </div>
+
+</div>
+
+<%- include('partials/footer') %>
+</body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+    const term = document.querySelector('#term');
+    const btnSearch = document.querySelector('#btnSearch');
+    btnSearch.addEventListener('click', search);
+
+    let resultDiv = document.querySelector('#results');
+
+    function search() {
+        const query =`http://localhost:8080/jeuxVideos/titre/${term.value}`;
+        axios.get(query)
+            .then(function(response) {
+                console.log(response);
+            });
+    }
+
+</script>
+
+</html>

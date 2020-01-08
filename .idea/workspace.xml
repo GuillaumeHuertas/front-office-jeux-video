@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/jeuxVideo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/jeuxVideos.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/movie-search.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/partials/navbar.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/movies.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/movies.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -37,7 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web_devis/devis-front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
@@ -93,7 +94,9 @@
       <workItem from="1578331922541" duration="9587000" />
       <workItem from="1578380424206" duration="2846000" />
       <workItem from="1578421166833" duration="3953000" />
-      <workItem from="1578436089521" duration="2512000" />
+      <workItem from="1578436089521" duration="2583000" />
+      <workItem from="1578509115871" duration="3041000" />
+      <workItem from="1578523866875" duration="3369000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -151,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578383623309</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Ajout multer">
+      <created>1578439474157</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1578439474157</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,45 +176,46 @@
     <MESSAGE value="Ajout fonctions aux ejs" />
     <MESSAGE value="Ajout formulaire Movies" />
     <MESSAGE value="Ajout tableau pour le formulaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout tableau pour le formulaire" />
+    <MESSAGE value="Ajout multer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout multer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578332942915">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578332942915" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578383623016">
+    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578439473824">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578383623016" />
+    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578439473824" />
     <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1578438281361">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1743" y="112" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1578438281361" />
-    <state width="1234" height="184" key="GridCell.Tab.0.bottom" timestamp="1578438260200">
+    <state width="1234" height="185" key="GridCell.Tab.0.bottom" timestamp="1578526812880">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="184" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1578438260200" />
-    <state width="1234" height="184" key="GridCell.Tab.0.center" timestamp="1578438260200">
+    <state width="1234" height="185" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1578526812880" />
+    <state width="1234" height="185" key="GridCell.Tab.0.center" timestamp="1578526812880">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="184" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1578438260200" />
-    <state width="1234" height="184" key="GridCell.Tab.0.left" timestamp="1578438260200">
+    <state width="1234" height="185" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1578526812880" />
+    <state width="1234" height="185" key="GridCell.Tab.0.left" timestamp="1578526812880">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="184" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1578438260200" />
-    <state width="1234" height="184" key="GridCell.Tab.0.right" timestamp="1578438260200">
+    <state width="1234" height="185" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1578526812880" />
+    <state width="1234" height="185" key="GridCell.Tab.0.right" timestamp="1578526812880">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="184" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1578438260200" />
+    <state width="1234" height="185" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1578526812880" />
     <state x="1464" y="0" key="SettingsEditor" timestamp="1578423621582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1464" y="0" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1578423621582" />
-    <state x="1555" y="100" key="Vcs.Push.Dialog.v2" timestamp="1578383629615">
+    <state x="1555" y="100" key="Vcs.Push.Dialog.v2" timestamp="1578439481086">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1555" y="100" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1578383629615" />
+    <state x="1555" y="100" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1578439481086" />
     <state x="1604" y="83" width="700" height="530" key="recent.locations.popup" timestamp="1578353107981">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
