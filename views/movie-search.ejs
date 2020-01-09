@@ -1,52 +1,63 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <!--    <meta name="viewport"-->
-    <!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-    <!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
-    <title>JeuxVideo</title>
-    <link rel="stylesheet" href="../public/style.css"/>
-</head>
-<body>
-<div class="central">
+    <head>
+        <meta charset="UTF-8">
+        <!--    <meta name="viewport"-->
+        <!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+        <!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+        <title>JeuxVideo</title>
+        <link rel="stylesheet" href="../public/style.css"/>
+    </head>
+    <body>
+        <div class="central">
 
-    <%- include('partials/header') %>
+            <%- include('partials/header') %>
 
-    <h1>Votre Recherche sur <em>The Movie Database</em></h1>
+            <h1>Votre Recherche sur <em>Jeux Vidéo</em></h1>
 
-    <div>
-        <input type="text" name="term" id="term" placeholder="titre de film">
-        <button id="btnSearch">chercher</button>
-    </div>
+            <div>
+                <input type="text" name="term" id="term" placeholder="titre de jeux vidéo">
+                <button id="btnSearch">chercher</button>
+            </div>
 
-    <div id="result">
+            <div id="results">
+            </div>
 
+        </div>
 
-    </div>
+        <%- include('partials/footer') %>
+    </body>
 
-</div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<%- include('partials/footer') %>
-</body>
+    <script>
+        const term = document.querySelector('#term');               // Récupère la balise 'term' du HTML
+        const btnSearch = document.querySelector('#btnSearch');     // Récupère la balise 'btnSearch' du HTML
+        btnSearch.addEventListener('click', search);                // Ecoute le click sur le bouton
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        let resultDiv = document.querySelector('#results');         // Renvoi le résultat sur la balise HTML
 
-<script>
-    const term = document.querySelector('#term');
-    const btnSearch = document.querySelector('#btnSearch');
-    btnSearch.addEventListener('click', search);
+        function search() {
+            const query =`http://localhost:8080/jeuxVideos/titre/${term.value}`;    //Récuère la valeur entré dans le cahmps de recherche
+            axios.get(query)
+                .then(function(response) {
+                    console.log(response);
+                    displayResults(response.data);                  // Appel la fonction displayResults et transfert le résultat du get
+                });
+        }
 
-    let resultDiv = document.querySelector('#results');
+        function displayResults(results) {
+            resultDiv.innerHTML = '';                               // Vide le contenu de la div
 
-    function search() {
-        const query =`http://localhost:8080/jeuxVideos/titre/${term.value}`;
-        axios.get(query)
-            .then(function(response) {
-                console.log(response);
+            results.forEach(element => {
+                console.log(element);
+                let movieDiv = document.createElement('div');       // Créé des balises div pour chaque élément
+                let movieDev = document.createElement('div');
+                movieDiv.innerHTML = element.titre;                 // Ajoute les éléments au format HTML ?
+                movieDev.innerHTML = element.developpeur;
+                resultDiv.appendChild(movieDiv);                    // Ajoute les élément au resultDiv
+                resultDiv.appendChild(movieDev);
             });
-    }
-
-</script>
-
+        }
+    </script>
 </html>

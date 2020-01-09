@@ -5,7 +5,7 @@
             <!--    <meta name="viewport"-->
             <!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
             <!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
-            <title>JeuxVideo</title>
+            <title>JeuxVideo :</title>
             <link rel="stylesheet" href="../public/style.css"/>
         </head>
 
@@ -16,11 +16,42 @@
 
                 <h1><%= title %></h1>
 
-                <div>COUcou</div>
+                <div id="results">
+                </div>
 
             </div>
 
-
             <%- include('partials/footer') %>
         </body>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <script>
+            let resultDiv = document.querySelector('#results');         // Renvoi le résultat sur la balise HTML
+
+            function search() {
+                const query =`http://localhost:8080/jeuxVideos`;    //Récuère la valeur entré dans le cahmps de recherche
+                axios.get(query)
+                    .then(function(response) {
+                        console.log(response);
+                        displayResults(response.data.content);                  // Appel la fonction displayResults et transfert le résultat du get
+                    });
+            }
+
+            function displayResults(results) {
+                resultDiv.innerHTML = '';                               // Vide le contenu de la div
+
+                results.forEach(element => {
+                    console.log(element);
+                    let movieDiv = document.createElement('div');       // Créé des balises div pour chaque élément
+                    let movieDev = document.createElement('div');
+                    movieDiv.innerHTML = element.titre;                 // Ajoute les éléments au format HTML ?
+                    movieDev.innerHTML = element.developpeur;
+                    resultDiv.appendChild(movieDiv);                    // Ajoute les élément au resultDiv
+                    resultDiv.appendChild(movieDev);
+                });
+            }
+
+            window.onload = search;
+        </script>
     </html>
