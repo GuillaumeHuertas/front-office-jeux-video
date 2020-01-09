@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/jeuxVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/jeuxVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/jeuxVideos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/jeuxVideos.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/movie-search.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/movie-search.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/movie-search.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/jeuxVideos-search.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,7 @@
       <workItem from="1578509115871" duration="3041000" />
       <workItem from="1578523866875" duration="3560000" />
       <workItem from="1578593164289" duration="1668000" />
-      <workItem from="1578599127978" duration="3409000" />
+      <workItem from="1578599127978" duration="5129000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -167,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578527409367</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Recherche et liste Jeux Vidéos OK">
+      <created>1578602555774</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1578602555774</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,17 +192,18 @@
     <MESSAGE value="Ajout tableau pour le formulaire" />
     <MESSAGE value="Ajout multer" />
     <MESSAGE value="Ajout Recherche" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout Recherche" />
+    <MESSAGE value="Recherche et liste Jeux Vidéos OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recherche et liste Jeux Vidéos OK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578332942915">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578332942915" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578527409078">
+    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578602555410">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578527409078" />
+    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578602555410" />
     <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1578438281361">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -219,10 +228,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1464" y="0" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1578423621582" />
-    <state x="1555" y="100" key="Vcs.Push.Dialog.v2" timestamp="1578527415839">
+    <state x="1555" y="100" key="Vcs.Push.Dialog.v2" timestamp="1578602571853">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1555" y="100" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1578527415839" />
+    <state x="1555" y="100" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1578602571853" />
     <state x="1604" y="83" width="700" height="530" key="recent.locations.popup" timestamp="1578353107981">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

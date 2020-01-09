@@ -18,7 +18,7 @@ app.set('header', 'Access-Control-Allow-Origin: *');
 
 let jeuxVideos = require('./routes/jeuxVideo');
 
-app.use('/jeuxVideos', jeuxVideos);
+app.use('/jeuxVideos', jeuxVideos);             // Donne le path à jeuxVideo.js jeuxVidéos
 
 app.get('/movies', (req, res) => {
 
@@ -65,10 +65,6 @@ app.get('/movies/:id/:titre', (req, res) => {
     const id = req.params.id;
     const titre = req.params.titre;
     res.render('movie-detail', { movieid: id, titrefilm: titre });
-});
-
-app.get('/movie-search', (req, res) => {
-    res.render('movie-search');
 });
 
 app.get('/', (req, res) =>{
