@@ -21,13 +21,14 @@
 
             </div>
 
-            <%- include('partials/footer') %>
+
         </body>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
         <script>
-            let resultDiv = document.querySelector('#results');         // Renvoi le résultat sur la balise HTML
+            let resultDiv = document.querySelector('#results');         // Renvoi le résultat sur la balise HTML avec jQuery
+            // let resultDiv = document.getElementById('results');         // Renvoi le résultat sur la balise HTML en natif
 
             function search() {
                 const query =`http://localhost:8080/jeuxVideos`;    //Récuère la valeur entré dans le cahmps de recherche

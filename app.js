@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-// Egalement pour le post de document
-const multer = require('multer');
+const multer = require('multer');                  //  permet de poster des images
+const jwt = require('jsonwebtoken');
 
 const app = express();
 const upload = multer();
@@ -34,7 +34,7 @@ app.get('/movies', (req, res) => {
     res.render('movies', { movies: listMovies, title: titleApp });
 });
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var urlencodedParser = bodyParser.urlencoded({ extended: false });      // Récupère le body d'un requête
 
 // app.post('/movies', urlencodedParser, (req, res) => {
 //     console.log(`Titre du film : ${req.body.movietitle}`);
@@ -69,6 +69,31 @@ app.get('/movies/:id/:titre', (req, res) => {
 
 app.get('/', (req, res) =>{
     res.render('index');
+});
+
+app.get('/login', (req, res) => {
+    res.render('login', {title: 'Connexion'});
+});
+
+const fakeUser = { email: 'testuser@testmail.fr', password: 'qsd' };
+const secret = 'qsdjS12ozehdoIJ123DJOZJLDSCqsdeffdg123ER56SDFZedhWXojqshduzaohduihqsDAqsdq'; // Le mieux c'est de le mettre en variable d'environement
+
+app.post('/login', urlencodedParser, (req, res) => {
+    console.log('login post ', req.body);
+    if(!req.body) {
+        res.sendStatus(500);
+    } else {
+        if(fakeUser.email === req.body.email && fakeUser.password === req.body.password) {
+            const myToken = jwt.sign({iss: 'http://expressmovie.fr', user: 'Sam', scope: 'admin'}, secret);
+            res.json(myToken);
+
+        } else  {
+            res.sendStatus(401);
+        }
+    }
+
+
+
 });
 
 app.listen(PORT, () => {
