@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/jeuxVideos-search.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/jeuxVideos-search.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/jeuxVideos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/jeuxVideos.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +95,8 @@
       <workItem from="1578523866875" duration="3560000" />
       <workItem from="1578593164289" duration="1668000" />
       <workItem from="1578599127978" duration="5812000" />
-      <workItem from="1578608121451" duration="4313000" />
+      <workItem from="1578608121451" duration="4565000" />
+      <workItem from="1578678875318" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -187,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578612160597</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Stockage Token dans le Local Storage du navigateur">
+      <created>1578612675870</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578612675870</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,45 +216,46 @@
     <MESSAGE value="Recherche et liste Jeux Vidéos OK" />
     <MESSAGE value="ajout router + refactor nom fichier" />
     <MESSAGE value="Génération Token OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Génération Token OK" />
+    <MESSAGE value="Stockage Token dans le Local Storage du navigateur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stockage Token dans le Local Storage du navigateur" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578610460453">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578610460453" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578612160280">
+    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578612675588">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578612160280" />
+    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578612675588" />
     <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1578438281361">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1743" y="112" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1578438281361" />
-    <state width="1234" height="189" key="GridCell.Tab.0.bottom" timestamp="1578611170854">
+    <state width="1234" height="189" key="GridCell.Tab.0.bottom" timestamp="1578678913389">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="189" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1578611170854" />
-    <state width="1234" height="189" key="GridCell.Tab.0.center" timestamp="1578611170854">
+    <state width="1234" height="189" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1578678913389" />
+    <state width="1234" height="189" key="GridCell.Tab.0.center" timestamp="1578678913389">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="189" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1578611170854" />
-    <state width="1234" height="189" key="GridCell.Tab.0.left" timestamp="1578611170854">
+    <state width="1234" height="189" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1578678913389" />
+    <state width="1234" height="189" key="GridCell.Tab.0.left" timestamp="1578678913389">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="189" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1578611170854" />
-    <state width="1234" height="189" key="GridCell.Tab.0.right" timestamp="1578611170854">
+    <state width="1234" height="189" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1578678913389" />
+    <state width="1234" height="189" key="GridCell.Tab.0.right" timestamp="1578678913389">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="189" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1578611170854" />
+    <state width="1234" height="189" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1578678913389" />
     <state x="1464" y="0" key="SettingsEditor" timestamp="1578423621582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1464" y="0" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1578423621582" />
-    <state x="1555" y="100" key="Vcs.Push.Dialog.v2" timestamp="1578602571853">
+    <state x="1555" y="100" key="Vcs.Push.Dialog.v2" timestamp="1578612684335">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1555" y="100" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1578602571853" />
+    <state x="1555" y="100" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1578612684335" />
     <state x="1616" y="123" width="607" height="536" key="find.popup" timestamp="1578609260406">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

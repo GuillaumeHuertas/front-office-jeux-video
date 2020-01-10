@@ -48,12 +48,14 @@
 
         function displayResults(results) {
             resultDiv.innerHTML = '';                               // Vide le contenu de la div
+            let i = 0;
 
             results.forEach(element => {
                 console.log(element);
+                i ++;
                 let movieDiv = document.createElement('div');       // Créé des balises div pour chaque élément
                 let movieDev = document.createElement('div');
-                movieDiv.innerHTML = element.titre;                 // Ajoute les éléments au format HTML ?
+                movieDiv.innerHTML = `${i}- ${element.titre}`;                 // Ajoute les éléments au format HTML ?
                 movieDev.innerHTML = element.developpeur;
                 resultDiv.appendChild(movieDiv);                    // Ajoute les élément au resultDiv
                 resultDiv.appendChild(movieDev);
