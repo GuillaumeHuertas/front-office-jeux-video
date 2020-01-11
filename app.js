@@ -2,18 +2,24 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const multer = require('multer');                  //  permet de poster des images
 const jwt = require('jsonwebtoken');
-
+const expressJwt = require('express-jwt');
 const app = express();
 const upload = multer();
 
 const PORT = 3000;
 let listMovies = [];
 
-app.use('/public', express.static('public'));
-// app.use(bodyParser.urlencoded({ extended: false }));
+const secret = 'qsdjS12ozehdoIJ123DJOZJLDSCqsdeffdg123ER56SDFZedhWXojqshduzaohduihqsDAqsdq'; // Le mieux c'est de le mettre en variable d'environement
 
+app.use('/public', express.static('public'));       // définie l'emplacement des fichiers statiques
+
+// nécessite la présence du token à l'exception de la page login
+app.use(expressJwt({secret: secret}).unless({path: ['/', '/jeuxVideos', '/login']}));
+
+// app.use(bodyParser.urlencoded({ extended: false }));
 app.set('views', './views');
 app.set('view engine', 'ejs');
+
 app.set('header', 'Access-Control-Allow-Origin: *');
 
 let jeuxVideos = require('./routes/jeuxVideo');
@@ -74,9 +80,7 @@ app.get('/', (req, res) =>{
 app.get('/login', (req, res) => {
     res.render('login', {title: 'Espace membre'});
 });
-
 const fakeUser = { email: 'testuser@testmail.fr', password: 'qsd' };
-const secret = 'qsdjS12ozehdoIJ123DJOZJLDSCqsdeffdg123ER56SDFZedhWXojqshduzaohduihqsDAqsdq'; // Le mieux c'est de le mettre en variable d'environement
 
 app.post('/login', urlencodedParser, (req, res) => {
     console.log('login post ', req.body);
@@ -91,9 +95,11 @@ app.post('/login', urlencodedParser, (req, res) => {
             res.sendStatus(401);
         }
     }
+});
 
-
-
+app.get('/member-only', (req, res) => {
+    console.log('req.user', req.user);
+    res.send(req.user);
 });
 
 app.listen(PORT, () => {

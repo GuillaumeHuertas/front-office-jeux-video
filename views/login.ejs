@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Express Movies</title>
     <link rel="stylesheet" href="../public/style.css" />
-    <script src="https://unpkg.com/axios@0.15.3/dist/axios.min.js"></script>
+<!--    <script src="https://unpkg.com/axios@0.15.3/dist/axios.min.js"></script>-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 <%- include('partials/header') %>
@@ -27,7 +28,9 @@
         <button id="disconnectBtn">déconnexion</button>
         <button id="display-payload">voir le payload</button>
         <div id="decoded-payload"></div>
-
+        <div>
+            <a href="#" id="member-only">espace membre</a>
+        </div>
     </div>
 
 </div>
@@ -49,6 +52,9 @@
     disconnectBtn.addEventListener('click', disconnect);
     let connectionLinkArea = document.querySelector('#connectionLink');
     handleFormDisplay();                // Appel la méthode au chargementde la page
+
+    var memberOnlyLink = document.querySelector('#member-only');
+    memberOnlyLink.addEventListener('click', makeRequestWithToken);
 
     function loginUser(event) {
         loginUserWithXHR(event);
@@ -120,15 +126,26 @@
         }
     }
 
+    function makeRequestWithToken(evt) {
+        evt.preventDefault();            // Important !!
+        let page = this.id;
+        let tokenFromStorage = localStorage.getItem('token');
+        let config = {};
 
-    // function loadMode() {
-    //     if(localStorage.getItem('token')) {
-    //         switchToLoggedInMode();
-    //     }
-    // }
-    //
-    // window.onload = loadMode;
+        if(tokenFromStorage) {
+            config.headers = {'Authorization': "Bearer " + JSON.parse(tokenFromStorage)};   // JSON.parse sinon guillements supp ajouté
+        }
 
+        axios.get(
+            'http://localhost:3000/' +page,
+            config
+        ).then(res => {
+            console.log('success');
+            console.log(res);
+        }).catch(err => {
+            console.error('makeRequestWithToken err', err);
+        });
+    }
 </script>
 </body>
 </html>
