@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/jeuxVideos-search.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/jeuxVideos-search.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/jeuxVideos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/jeuxVideos.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +100,7 @@
       <workItem from="1578698227644" duration="1167000" />
       <workItem from="1578699497645" duration="544000" />
       <workItem from="1578701107249" duration="512000" />
-      <workItem from="1578701737214" duration="1600000" />
+      <workItem from="1578701737214" duration="1887000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -207,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578612675870</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Connexion/déconnexion avec changement de bouton">
+      <created>1578703394147</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1578703394147</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,16 +228,18 @@
     <MESSAGE value="ajout router + refactor nom fichier" />
     <MESSAGE value="Génération Token OK" />
     <MESSAGE value="Stockage Token dans le Local Storage du navigateur" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stockage Token dans le Local Storage du navigateur" />
+    <MESSAGE value="Connexion/déconnexion avec changement de bouton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connexion/déconnexion avec changement de bouton" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578610460453">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578610460453" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1578612675588">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="1137" y="0" key="CommitChangelistDialog2" timestamp="1578703393251">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="1137" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578703393251" />
     <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1578612675588" />
     <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1578438281361">
       <screen x="0" y="0" width="2560" height="1400" />

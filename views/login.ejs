@@ -42,6 +42,7 @@
     let disconnectBtn = document.querySelector('#disconnectBtn');
     disconnectBtn.addEventListener('click', disconnect);
     let connectionLinkArea = document.querySelector('#connectionLink');
+    handleFormDisplay();                // Appel la méthode au chargementde la page
 
 
     function loginUser(event) {
@@ -73,6 +74,14 @@
         xhr.send(payLoad);
     }
 
+    function handleFormDisplay() {
+        if(localStorage.getItem('token')) {
+            switchToLoggedInMode();
+        } else {
+            switchToLoggedOutMode();
+        }
+    }
+
     function disconnect() {
         switchToLoggedOutMode();
         localStorage.removeItem('token');
@@ -90,13 +99,13 @@
         connectionLinkArea.innerHTML = '<a href="/login">connexion</a>';
     }
 
-    function loadMode() {
-        if(localStorage.getItem('token')) {
-            switchToLoggedInMode();
-        }
-    }
-
-    window.onload = loadMode;
+    // function loadMode() {
+    //     if(localStorage.getItem('token')) {
+    //         switchToLoggedInMode();
+    //     }
+    // }
+    //
+    // window.onload = loadMode;
 
 </script>
 </body>
