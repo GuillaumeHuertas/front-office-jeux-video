@@ -25,6 +25,9 @@
     <!-- Mode display none dans style.css pour #profile   -->
     <div id="profile">
         <button id="disconnectBtn">déconnexion</button>
+        <button id="display-payload">voir le payload</button>
+        <div id="decoded-payload"></div>
+
     </div>
 
 </div>
@@ -39,11 +42,13 @@
     let loginArea = document.querySelector('#login');
     let profileArea = document.querySelector('#profile');
 
+    let displayPayloadBtn = document.querySelector('#display-payload');
+    displayPayloadBtn.addEventListener('click', displayPayload);
+
     let disconnectBtn = document.querySelector('#disconnectBtn');
     disconnectBtn.addEventListener('click', disconnect);
     let connectionLinkArea = document.querySelector('#connectionLink');
     handleFormDisplay();                // Appel la méthode au chargementde la page
-
 
     function loginUser(event) {
         loginUserWithXHR(event);
@@ -98,6 +103,23 @@
         profileArea.style.display = 'none';
         connectionLinkArea.innerHTML = '<a href="/login">connexion</a>';
     }
+
+    function displayPayload() {
+        let payload = parseJWT();           // Appel la méthode
+        let decodedPayloadDiv = document.querySelector('#decoded-payload');         // Récupère la div #decoded-payload
+        decodedPayloadDiv.innerHTML = `<pre>${JSON.stringify(payload)}</pre>`;      // Ajoute le payload à la div
+    }
+
+    function parseJWT() {
+        let tokenFromLocalStorage = localStorage.getItem('token');      // Récupère le token
+        if(tokenFromLocalStorage) {
+            let base64Payload = tokenFromLocalStorage.split('.')[1];    // Split le token et prend la deuxième partie
+            return JSON.parse(window.atob(base64Payload));              // Décode la 2nd partie du token et la Json
+        } else {                                                        // à l'aide de la méthode atob
+            return 'not token to parse';
+        }
+    }
+
 
     // function loadMode() {
     //     if(localStorage.getItem('token')) {
