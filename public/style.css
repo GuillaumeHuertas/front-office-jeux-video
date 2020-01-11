@@ -6,6 +6,10 @@ body {
     min-height: 250px;
 }
 
+#profile {
+    display:none
+}
+
 a {
     text-decoration: none;
 }
