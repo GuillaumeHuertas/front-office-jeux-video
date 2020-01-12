@@ -14,7 +14,7 @@ const secret = 'qsdjS12ozehdoIJ123DJOZJLDSCqsdeffdg123ER56SDFZedhWXojqshduzaohdu
 app.use('/public', express.static('public'));       // définie l'emplacement des fichiers statiques
 
 // nécessite la présence du token à l'exception de la page login
-app.use(expressJwt({secret: secret}).unless({path: ['/', '/jeuxVideos', '/login']}));
+app.use(expressJwt({secret: secret}).unless({path: ['/', '/movies', '/jeuxVideos', '/jeuxVideos/search', '/login']}));
 
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.set('views', './views');
