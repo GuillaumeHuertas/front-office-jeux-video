@@ -91,9 +91,6 @@ app.post('/login', urlencodedParser, (req, res) => {
             res.sendStatus(401);
         }
     }
-
-
-
 });
 
 app.listen(PORT, () => {

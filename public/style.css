@@ -1,11 +1,155 @@
 body {
     font-family: Consolas,Monaco,"Andale Mono",Monospace;
+    background: url("fond_jaune.png");
+    color: #181818;
 }
 
 .central {
     min-height: 250px;
+    width: 900px;
+    margin: auto;
 }
 
 a {
     text-decoration: none;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-between;
+    /*align-items: flex-end;*/
+}
+
+#titre_principal {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -70px;
+}
+
+#logo {
+    display: flex;
+    /*flex-direction: row;*/
+    /*align-items: baseline;*/
+}
+
+#logo img {
+    width: 80px;
+    /*height: 60px;*/
+    position: relative;
+    left: -20px;
+}
+
+header h1 {
+    font-family: Serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}
+
+header h2 {
+    font-family: Dayrom, Serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bold;
+    border-bottom: 3px solid #181818;
+}
+
+/* Formulaire new jeux vidéo */
+
+#form_new_jv ul {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    bottom: 15px;
+    /*justify-content: space-between;*/
+}
+
+#form_new_jv li {
+    display: flex;
+    /*flex-direction: column;*/
+    /*justify-content: space-around;*/
+    /*align-items: flex-end;*/
+    /*align-items: baseline;*/
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+#form_new_jv input {
+    display: flex;
+    position: center;
+    /*width: 20px;*/
+    left: 250px;
+
+    /*position: relative;*/
+
+}
+
+#form_new_jv textarea, input, select{
+    border-radius: 5px;
+}
+
+#form_new_jv label {
+    width: 15%;
+}
+
+#statut_jeux {
+    display: flex;
+    /*flex-grow: inherit;*/
+    align-items: center;
+    /*vertical-align:  middle;*/
+    /*horiz-align: left;*/
+}
+
+#statut_jeux div {
+    width: 120%;
+
+}
+
+#banniere_image {
+    background: url("../public/nier_automata_banner.jpg") no-repeat center;
+    background-size: 100%;
+    border-radius: 15px;
+
+    /*resize: inherit;*/
+    height: 281px;
+    box-shadow: 0px 4px 4px #1c1a19;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+section {
+    height: 800px;
 }
