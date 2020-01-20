@@ -88,6 +88,19 @@ nav a:hover {
     /*justify-content: space-between;*/
 }
 
+/*#form_new_jv form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    !*display: flex;*!*/
+/*    margin-bottom: 20px;*/
+/*    !*bottom: 50px;*!*/
+/*}*/
+
+#form_new_jv fieldset {
+    display: block;
+    margin-bottom: 15px;
+}
+
 #form_new_jv li {
     display: flex;
     /*flex-direction: column;*/
@@ -116,6 +129,12 @@ nav a:hover {
     width: 15%;
 }
 
+#add-jeux-video {
+    /*position: relative;*/
+    right: 50%;
+
+}
+
 #statut_jeux {
     display: flex;
     /*flex-grow: inherit;*/
@@ -124,9 +143,12 @@ nav a:hover {
     /*horiz-align: left;*/
 }
 
+#add-jeux-video:hover {
+    background-color: white;
+}
+
 #statut_jeux div {
     width: 120%;
-
 }
 
 #banniere_image {
@@ -141,6 +163,10 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+/*:required {*/
+/*    background-color: red;*/
+/*}*/
+
 
 
 
@@ -151,5 +177,5 @@ nav a:hover {
 
 
 section {
-    height: 800px;
+    height: 1000px;
 }

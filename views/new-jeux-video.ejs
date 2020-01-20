@@ -14,67 +14,78 @@
 
             <section>
                 <%- include('partials/banner') %>
-                <h1>Ajouter un jeux vidéo à votre collection</h1>
+                <h1>Ajouter un jeu vidéo à votre collection</h1>
                 <div id="form_new_jv">
                     <form action="POST">
-                        <ul>
-                            <li>
-                                <label for="name-jeux-video">Titre : </label>
-                                <input type="text" name="name-jeux-video" id="name-jeux-video" placeholder="Ex: Final Fantasy" required>
-                            </li>
+<!--                        <ul>-->
+                            <fieldset>
+                                <legend>Informations sur le Jeu</legend>
+                                <ul>
+                                <li>
+                                    <label for="name-jeux-video">Titre : </label>
+                                    <input type="text" name="name-jeux-video" id="name-jeux-video" placeholder="Ex: Final Fantasy" required>
+                                </li>
 
-                            <li>
-                                <label for="dev">Développeur :</label>
-                                <input type="text" name="dev" id="dev" placeholder="Ex: Square-Enix" required>
-                            </li>
+                                <li>
+                                    <label for="dev">Développeur :</label>
+                                    <input type="text" name="dev" id="dev" placeholder="Ex: Square-Enix" required>
+                                </li>
 
-                            <li>
-                                <label for="editeur">Editeur : </label>
-                                <input type="text" name="editeur" id="editeur" placeholder="Ex: Square-Enix" required>
-                            </li>
+                                <li>
+                                    <label for="editeur">Editeur : </label>
+                                    <input type="text" name="editeur" id="editeur" placeholder="Ex: Square-Enix" required>
+                                </li>
 
-                            <li>
-                                <label for="date">Sortie : </label>
-                                <input type="date" name="date" id="date">
-                            </li>
+                                <li>
+                                    <label for="date">Sortie : </label>
+                                    <input type="date" name="date" id="date">
+                                </li>
 
-                            <li>
-                                <label for="console">Console</label>
-                                <select name="console" id="console">
-                                    <optgroup label="Sony">
-                                        <option value="ps1">Playstation</option>
-                                        <option value="ps2">Playstation 2</option>
-                                        <option value="ps3">Playstation 3</option>
-                                        <option value="ps4">Playstation 4</option>
-                                    </optgroup>
-                                    <optgroup label="Nintendo">
-                                        <option value="SNES">Super Nintendo</option>
-                                        <option value="N64">Nintendo 64</option>
-                                        <option value="GC">Gamecube</option>
-                                        <option value="Wii">Wii</option>
-                                    </optgroup>
-                                </select>
-                            </li>
+                                <li>
+                                    <label for="console">Console</label>
+                                    <select name="console" id="console">
+                                        <optgroup label="Sony">
+                                            <option value="ps1">Playstation</option>
+                                            <option value="ps2">Playstation 2</option>
+                                            <option value="ps3">Playstation 3</option>
+                                            <option value="ps4">Playstation 4</option>
+                                        </optgroup>
+                                        <optgroup label="Nintendo">
+                                            <option value="SNES">Super Nintendo</option>
+                                            <option value="N64">Nintendo 64</option>
+                                            <option value="GC">Gamecube</option>
+                                            <option value="Wii">Wii</option>
+                                        </optgroup>
+                                    </select>
+                                </li>
+                                </ul>
+                            </fieldset>
 
-                            <li>
-                                <div id="statut_jeux">
-                                    <div>Avez-vous fini ce jeux ?</div>
-                                    <input type="radio" name="statut" id="fini"><label for="fini">Oui</label>
-                                    <input type="radio" name="statut" id="pasFini"><label for="pasFini">Non</label>
-                                </div>
-                            </li>
+                            <fieldset>
+                                <legend>Votre expérience</legend>
+                                <ul>
+                                <li>
+                                    <div id="statut_jeux">
+                                        <div>Avez-vous fini ce jeu vidéo?</div>
+                                        <input type="radio" name="statut" id="fini"><label for="fini">Oui</label>
+                                        <input type="radio" name="statut" id="pasFini"><label for="pasFini">Non</label>
+                                    </div>
+                                </li>
 
-                            <li>
-                                <label for="note">Note : </label>
-                                <input type="number" name="note" id="note" min="0" max="20" placeholder="15">
-                            </li>
+                                <li>
+                                    <label for="note">Note : </label>
+                                    <input type="number" name="note" id="note" min="0" max="20" placeholder="15">
+                                </li>
 
-                            <li>
-                                <label for="description">Description :</label>
-                                <textarea name="description" id="description" cols="50" rows="8"
-                                      placeholder="Que pensez vous de ce jeux ?"></textarea>
-                            </li>
-                        </ul>
+                                <li>
+                                    <label for="description">Description :</label>
+                                    <textarea name="description" id="description" cols="50" rows="8"
+                                          placeholder="Que pensez vous de ce jeux ?"></textarea>
+                                </li>
+                                </ul>
+                            </fieldset>
+<!--                        </ul>-->
+                        <input type="submit" value="Ajouter" id="add-jeux-video">
                     </form>
                 </div>
 
