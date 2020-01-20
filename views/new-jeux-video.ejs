@@ -16,7 +16,7 @@
                 <%- include('partials/banner') %>
                 <h1>Ajouter un jeu vidéo à votre collection</h1>
                 <div id="form_new_jv">
-                    <form action="POST">
+                    <form action="/jeuxVideos/new" method="post">
 <!--                        <ul>-->
                             <fieldset>
                                 <legend>Informations sur le Jeu</legend>
@@ -92,5 +92,38 @@
             </section>
             <%- include('partials/footer') %>
         </div>
+
+        <script>
+            const form = document.querySelector('form');
+            form.addEventListener('submit', addMovie);
+
+            function addMovie(event) {
+                event.preventDefault();
+
+                if(fetch) {
+                    fetch('/jeuxVideos/new', {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                        .then(checkStatus)
+                        .catch(function(error) {
+                            console.error('request failed', error);
+                        })
+                } else {
+                    // jQuery, XHR
+                }
+            }
+
+            function checkStatus(response) {
+                if(response.status >= 200 && response.status < 300) {
+                    // let newMovieDiv = document.createElement('div');
+                    // const movietitle = document.getElementById('movietitle').value;
+                    // const movieyear = document.getElementById('movieyear').value;
+                    // newMovieDiv.innerHTML = `${movietitle} ${movieyear}`;
+                    // document.querySelector('.french-movies').appendChild(newMovieDiv);
+                    form.reset();
+                }
+            }
+        </script>
     </body>
 </html>

@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/jeuxVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/jeuxVideo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/jeuxVideos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/jeuxVideos.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/movies.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/movies.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/new-jeux-video.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/new-jeux-video.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestNodeJS" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
@@ -111,7 +111,7 @@
       <workItem from="1579284161979" duration="14235000" />
       <workItem from="1579345321139" duration="4125000" />
       <workItem from="1579432616460" duration="796000" />
-      <workItem from="1579545277900" duration="5306000" />
+      <workItem from="1579545277900" duration="7742000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -232,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579545440763</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Ajouter et lire Movies from db OK">
+      <created>1579550669452</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579550669452</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,37 +262,38 @@
     <MESSAGE value="Stockage Token dans le Local Storage du navigateur" />
     <MESSAGE value="Ajout numéro sur les listes" />
     <MESSAGE value="ejs ajouter une jeux vidéo" />
-    <option name="LAST_COMMIT_MESSAGE" value="ejs ajouter une jeux vidéo" />
+    <MESSAGE value="Ajouter et lire Movies from db OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajouter et lire Movies from db OK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578610460453">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578610460453" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1579545440377">
+    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1579550669155">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1579545440377" />
-    <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1579286101099">
+    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1579550669155" />
+    <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1579550857966">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1743" y="112" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1579286101099" />
-    <state width="1234" height="273" key="GridCell.Tab.0.bottom" timestamp="1579548089280">
+    <state x="1743" y="112" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1579550857966" />
+    <state width="2517" height="665" key="GridCell.Tab.0.bottom" timestamp="1579553068120">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="273" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1579548089280" />
-    <state width="1234" height="273" key="GridCell.Tab.0.center" timestamp="1579548089280">
+    <state width="2517" height="665" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1579553068120" />
+    <state width="2517" height="665" key="GridCell.Tab.0.center" timestamp="1579553068120">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="273" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1579548089280" />
-    <state width="1234" height="273" key="GridCell.Tab.0.left" timestamp="1579548089280">
+    <state width="2517" height="665" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1579553068120" />
+    <state width="2517" height="665" key="GridCell.Tab.0.left" timestamp="1579553068119">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="273" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1579548089280" />
-    <state width="1234" height="273" key="GridCell.Tab.0.right" timestamp="1579548089280">
+    <state width="2517" height="665" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1579553068119" />
+    <state width="2517" height="665" key="GridCell.Tab.0.right" timestamp="1579553068120">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="273" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1579548089280" />
+    <state width="2517" height="665" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1579553068120" />
     <state x="1464" y="0" key="SettingsEditor" timestamp="1578423621582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

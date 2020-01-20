@@ -16,6 +16,15 @@
 
                 <h1><%= title %></h1>
 
+                <div>
+                    <% for(jeuxvideo of jeuxvideos) { %>
+                        <div><%= jeuxvideo.titre %> <%= jeuxvideo.developpeur %></div>
+                    <% } %>
+                </div>
+
+                <div>
+                    <p>Séparation</p>
+                </div>
                 <div id="results"></div>
 
                 <%- include('partials/footer') %>
