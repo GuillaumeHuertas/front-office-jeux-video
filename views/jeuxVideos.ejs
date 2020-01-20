@@ -16,9 +16,7 @@
 
                 <h1><%= title %></h1>
 
-                <div id="results">
-                </div>
-
+                <div id="results"></div>
 
                 <%- include('partials/footer') %>
             </div>
@@ -31,7 +29,7 @@
             // let resultDiv = document.getElementById('results');         // Renvoi le résultat sur la balise HTML en natif
 
             function search() {
-                const query =`http://localhost:8080/jeuxVideos`;    //Récuère la valeur entré dans le cahmps de recherche
+                const query =`http://localhost:8080/jeuxVideos`;    //Récupère la valeur entré dans le cahmps de recherche
                 axios.get(query)
                     .then(function(response) {
                         console.log(response);
