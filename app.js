@@ -3,9 +3,16 @@ const bodyParser = require('body-parser');
 const multer = require('multer');//  permet de poster des images
 
 const jwt = require('jsonwebtoken');
+// const expressJwt = require('express-jwt');
+
 
 // Permet de générer des nom, années etc au hasard
 const faker=  require('faker');
+
+// import du fichier de config
+const config = require('./config');
+
+console.log(config);
 
 const mongoose = require('mongoose');
 
@@ -21,7 +28,7 @@ const options = {
 };
 
 // Informations de connection à la base de données
-mongoose.connect('mongodb+srv://samuser:samuser@expressmovie-zcc1l.mongodb.net/test?retryWrites=true&w=majority', options);
+mongoose.connect(`mongodb+srv://${config.db.user}:${config.db.password}@expressmovie-zcc1l.mongodb.net/test?retryWrites=true&w=majority`, options);
 const db = mongoose.connection;
 // Affiche une erreur ou le succès à la connection à la DB au lancement de l'app
 db.on('error', console.error.bind(console, 'connection error: cannot connect to my DB'));
@@ -59,6 +66,10 @@ let listMovies = [];
 app.use('/public', express.static('public'));
 // app.use(bodyParser.urlencoded({ extended: false }));
 
+const secret = 'qsdjS12ozehdoIJ123DJOZJLDSCqsdeffdg123ER56SDFZedhWXojqshduzaohduihqsDAqsdq'; // Le mieux c'est de le mettre en variable d'environement
+// app.use(expressJwt({ secret: secret }).unless({ path: ['/', '/movies', '/movies-search', '/login', new RegExp('/movies.*/', 'i')] }));
+
+
 // Déclaration du fichier de views
 app.set('views', './views');
 // Déclaration de ejs pour ne pas avoir à préciser les .ejs
@@ -91,6 +102,7 @@ app.get('/movies', (req, res) => {
     });
 });
 
+// Middleware permetant de récupérer les params de la requête
 var urlencodedParser = bodyParser.urlencoded({ extended: false });      // Récupère le body d'un requête
 
 // app.post('/movies', urlencodedParser, (req, res) => {
@@ -105,6 +117,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });      // Récu
 //     res.sendStatus(201);
 // });
 
+// upload.fields pour récupérer le body
 app.post('/movies', upload.fields([]), (req, res) => {
     if(!req.body) {
         return res.sendStatus(500);
@@ -124,13 +137,28 @@ app.post('/movies', upload.fields([]), (req, res) => {
             }
 
         })
-
-
         // const newMovie = { title: req.body.movietitle, year: req.body.movieyear };
         // listMovies = [...listMovies, newMovie];
         // res.sendStatus(201);
     }
+});
 
+// urlencodedParser permet d'obtenir la propriété req.body
+app.put('/movies-details/:id', upload.fields([]), (req, res) => {
+    if (!req.body) {
+        return res.sendStatus(500);
+    }
+    console.log(req.body);
+    console.log('movietitle: ', req.body.movietitle, 'movieyear : ', req.body.movieyear);
+    const id = req.params.id;
+    // { new: true } permet de récupérer l'objet modifié
+    Movie.findByIdAndUpdate(id, {$set: {movietitle: req.body.movietitle,  movieyear: req.body.movieyear}}, { new: true },(err, movie) => {
+        if (err) {
+            console.log(err);
+            return res.send('le film n\'a pas pu être mis à jour');
+        }
+        return res.redirect('/movies');
+    });
 });
 
 app.get('/movies/:id/:titre', (req, res) => {
@@ -143,12 +171,15 @@ app.get('/', (req, res) =>{
     res.render('index');
 });
 
+app.get('/', (req, res) =>{
+    res.render('index');
+});
+
 app.get('/login', (req, res) => {
     res.render('login', {title: 'Connexion'});
 });
 
 const fakeUser = { email: 'testuser@testmail.fr', password: 'qsd' };
-const secret = 'qsdjS12ozehdoIJ123DJOZJLDSCqsdeffdg123ER56SDFZedhWXojqshduzaohduihqsDAqsdq'; // Le mieux c'est de le mettre en variable d'environement
 
 app.post('/login', urlencodedParser, (req, res) => {
     console.log('login post ', req.body);

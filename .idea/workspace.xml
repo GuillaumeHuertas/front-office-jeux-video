@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/jeuxVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/jeuxVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/jeuxVideos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/jeuxVideos.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/new-jeux-video.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/new-jeux-video.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +27,7 @@
   <component name="ProjectId" id="1W1zWgDQAwDRmof2NrLIJuTXsy6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,7 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestNodeJS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
@@ -111,7 +111,9 @@
       <workItem from="1579284161979" duration="14235000" />
       <workItem from="1579345321139" duration="4125000" />
       <workItem from="1579432616460" duration="796000" />
-      <workItem from="1579545277900" duration="7742000" />
+      <workItem from="1579545277900" duration="7935000" />
+      <workItem from="1579556257260" duration="173000" />
+      <workItem from="1579628775477" duration="7501000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -239,11 +241,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579550669452</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Ajout Post Jeux Vidéos">
+      <created>1579553180876</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1579553180876</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit init" />
@@ -263,49 +282,54 @@
     <MESSAGE value="Ajout numéro sur les listes" />
     <MESSAGE value="ejs ajouter une jeux vidéo" />
     <MESSAGE value="Ajouter et lire Movies from db OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajouter et lire Movies from db OK" />
+    <MESSAGE value="Ajout Post Jeux Vidéos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout Post Jeux Vidéos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578610460453">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578610460453" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1579550669155">
+    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1579553180579">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1579550669155" />
-    <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1579550857966">
+    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1579553180579" />
+    <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1579556260582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1743" y="112" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1579550857966" />
-    <state width="2517" height="665" key="GridCell.Tab.0.bottom" timestamp="1579553068120">
+    <state x="1743" y="112" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1579556260582" />
+    <state width="1234" height="392" key="GridCell.Tab.0.bottom" timestamp="1579635946624">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="665" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1579553068120" />
-    <state width="2517" height="665" key="GridCell.Tab.0.center" timestamp="1579553068120">
+    <state width="1234" height="392" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1579635946624" />
+    <state width="1234" height="392" key="GridCell.Tab.0.center" timestamp="1579635946624">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="665" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1579553068120" />
-    <state width="2517" height="665" key="GridCell.Tab.0.left" timestamp="1579553068119">
+    <state width="1234" height="392" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1579635946624" />
+    <state width="1234" height="392" key="GridCell.Tab.0.left" timestamp="1579635946624">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="665" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1579553068119" />
-    <state width="2517" height="665" key="GridCell.Tab.0.right" timestamp="1579553068120">
+    <state width="1234" height="392" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1579635946624" />
+    <state width="1234" height="392" key="GridCell.Tab.0.right" timestamp="1579635946624">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="665" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1579553068120" />
+    <state width="1234" height="392" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1579635946624" />
+    <state x="992" y="417" key="MultipleFileMergeDialog" timestamp="1579556330614">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="992" y="417" key="MultipleFileMergeDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1579556330614" />
     <state x="1464" y="0" key="SettingsEditor" timestamp="1578423621582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1464" y="0" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1578423621582" />
-    <state x="1555" y="100" key="Vcs.Push.Dialog.v2" timestamp="1578679242665">
+    <state x="1555" y="100" key="Vcs.Push.Dialog.v2" timestamp="1579556363521">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1555" y="100" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1578679242665" />
-    <state x="1616" y="123" width="607" height="536" key="find.popup" timestamp="1579285203381">
+    <state x="1555" y="100" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1579556363521" />
+    <state x="1616" y="123" width="607" height="536" key="find.popup" timestamp="1579633355591">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1616" y="123" width="607" height="536" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1579285203381" />
+    <state x="1616" y="123" width="607" height="536" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1579633355591" />
     <state x="1604" y="83" width="700" height="530" key="recent.locations.popup" timestamp="1578353107981">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

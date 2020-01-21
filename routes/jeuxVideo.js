@@ -29,7 +29,7 @@ router.post('/new', (req, res) => {
 
    var args = {
       data: {
-         "titre": "Spyro",
+         "titre": "Spyro 2",
          "developpeur": "Insomniac Games",
          "editeur": "Activision",
          "statut": true,
@@ -47,7 +47,9 @@ router.post('/new', (req, res) => {
       console.log("passe ici");
       // raw response
       // console.log(response);
+      res.redirect('/jeuxVideos');
    });
+   console.log("passe là");
 
 });
 
