@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/movie-details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/movie-details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/movies.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/movies.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +111,7 @@
       <workItem from="1579432616460" duration="796000" />
       <workItem from="1579545277900" duration="7935000" />
       <workItem from="1579556257260" duration="173000" />
-      <workItem from="1579628775477" duration="12689000" />
+      <workItem from="1579628775477" duration="13844000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -267,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579643645356</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Put fonctionne correctement">
+      <created>1579643925071</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1579643925071</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,17 +312,18 @@
     <MESSAGE value="Ajouts" />
     <MESSAGE value="Movie Details ok" />
     <MESSAGE value="Put ok avec un post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Put ok avec un post" />
+    <MESSAGE value="Put fonctionne correctement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put fonctionne correctement" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578610460453">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578610460453" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1579643645037">
+    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1579643924802">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1579643645037" />
+    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1579643924802" />
     <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1579556260582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
