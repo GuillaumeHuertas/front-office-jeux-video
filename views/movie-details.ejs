@@ -12,7 +12,7 @@
             <h1>Détails</h1>
 
             <div>
-                <form action="/movie-details/<%= movie._id %>" method="post">
+                <form action="/movie-details/<%= movie._id %>?_method=PUT" method="post">
                     <legend>Modifier le film</legend>
                     <label for="movietitle">Titre du film :</label>
                     <input type="text" name="movietitle" id="movietitle" value="<%= movie.movietitle %>">

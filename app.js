@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const multer = require('multer');//  permet de poster des images
-// const methodOverride = require('method-override');
+const methodOverride = require('method-override');
 
 const jwt = require('jsonwebtoken');
 // const expressJwt = require('express-jwt');
@@ -65,7 +65,7 @@ const PORT = 3000;
 let listMovies = [];
 
 // override with POST having ?_method=DELETE
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 // Déclaration des fihciers statics
 app.use('/public', express.static('public'));
@@ -105,8 +105,8 @@ app.get('/movies', (req, res) => {
     });
 });
 
-// upload.fields pour récupérer le body
-app.post('/movies', upload.fields([]), (req, res) => {
+// upload.fields pour récupérer le body upload.fields([]) à la place de urlencodedParser
+app.post('/movies', urlencodedParser, (req, res) => {
     if(!req.body) {
         return res.sendStatus(500);
     } else {
@@ -139,7 +139,7 @@ app.get('/movie-details/:id', (req, res) => {
     });
 });
 
-app.post('/movie-details/:id', urlencodedParser, (req, res) => {
+app.put('/movie-details/:id', urlencodedParser, (req, res) => {
     console.log("super coucou");
     if (!req.body) {
         return res.sendStatus(500);
