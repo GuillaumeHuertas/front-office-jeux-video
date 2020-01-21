@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>JeuxVideo</title>
         <link rel="stylesheet" href="../public/style.css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
         <div class="central">
@@ -22,10 +23,27 @@
                 </form>
             </div>
 
+            <button id="btnSuppr">suppr</button>
 
             <div><button><a href="/movies">Retour</a></button></div>
 
             <%- include('partials/footer') %>
         </div>
+        <script>
+            let btnSuppr = document.getElementById('btnSuppr');
+            btnSuppr.addEventListener('click', deleteDocument);
+
+            function deleteDocument() {
+                <!--let movieId = <%= JSON.stringify(movie._id) %>;-->
+                let movieId = '<%= movie._id %>';
+                axios.delete(`/movie-details/${ movieId }`)
+                    .then(response => {
+                        window.location = '/movies';
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+            }
+        </script>
     </body>
 </html>

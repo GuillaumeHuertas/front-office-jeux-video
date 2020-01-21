@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
    client.methods.jsonMethod(function (data, response) {
 
-      console.log(data.content);
+      // console.log(data.content);
 
       const jeuxvideos = data.content;
 
@@ -47,10 +47,9 @@ router.post('/new', (req, res) => {
       console.log("passe ici");
       // raw response
       // console.log(response);
-      res.redirect('/jeuxVideos');
+
    });
    console.log("passe là");
-
 });
 
 router.get('/search', (req, res) => {

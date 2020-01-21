@@ -157,6 +157,13 @@ app.put('/movie-details/:id', urlencodedParser, (req, res) => {
     });
 });
 
+app.delete('/movie-details/:id', (req, res) => {
+    const id = req.params.id;
+    Movie.findByIdAndRemove(id, (err, movie) => {
+        res.sendStatus(202);
+    });
+});
+
 app.get('/movies/:id/:titre', (req, res) => {
     const id = req.params.id;
     const titre = req.params.titre;
