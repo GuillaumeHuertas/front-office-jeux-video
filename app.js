@@ -106,7 +106,7 @@ app.get('/movies', (req, res) => {
 });
 
 // upload.fields pour récupérer le body upload.fields([]) à la place de urlencodedParser
-app.post('/movies', urlencodedParser, (req, res) => {
+app.post('/movies', upload.fields([]), (req, res) => {
     if(!req.body) {
         return res.sendStatus(500);
     } else {
