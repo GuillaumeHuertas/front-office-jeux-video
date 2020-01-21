@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ebef8ba-3f9a-40f2-8677-803209a1edff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/movie-details.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/jeuxVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/jeuxVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/movies-details.ejs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,7 @@
       <workItem from="1579432616460" duration="796000" />
       <workItem from="1579545277900" duration="7935000" />
       <workItem from="1579556257260" duration="173000" />
-      <workItem from="1579628775477" duration="7501000" />
+      <workItem from="1579628775477" duration="9106000" />
     </task>
     <task id="LOCAL-00001" summary="commit init">
       <created>1578349741855</created>
@@ -248,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579553180876</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Ajouts">
+      <created>1579637875027</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1579637875027</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,17 +289,18 @@
     <MESSAGE value="ejs ajouter une jeux vidéo" />
     <MESSAGE value="Ajouter et lire Movies from db OK" />
     <MESSAGE value="Ajout Post Jeux Vidéos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout Post Jeux Vidéos" />
+    <MESSAGE value="Ajouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajouts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578610460453">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1331" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1578610460453" />
-    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1579553180579">
+    <state x="1558" y="0" key="CommitChangelistDialog2" timestamp="1579637874718">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1579553180579" />
+    <state x="1558" y="0" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1579637874718" />
     <state x="1743" y="112" key="FileChooserDialogImpl" timestamp="1579556260582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -4,7 +4,9 @@ const multer = require('multer');//  permet de poster des images
 
 const jwt = require('jsonwebtoken');
 // const expressJwt = require('express-jwt');
-
+const fakeUser = { email: 'testuser@testmail.fr', password: 'qsd' };
+// Le mieux c'est de le mettre en variable d'environement
+const secret = 'qsdjS12ozehdoIJ123DJOZJLDSCqsdeffdg123ER56SDFZedhWXojqshduzaohduihqsDAqsdq';
 
 // Permet de générer des nom, années etc au hasard
 const faker=  require('faker');
@@ -12,14 +14,13 @@ const faker=  require('faker');
 // import du fichier de config
 const config = require('./config');
 
-console.log(config);
-
 const mongoose = require('mongoose');
 
-
 const app = express();
+// Middleware permetant de récupérer le body et ses params
 const upload = multer();
-
+// Middleware permetant de récupérer le body et ses params
+let urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // Nécessaire pour faire fonctionner mongoose !
 const options = {
@@ -66,9 +67,7 @@ let listMovies = [];
 app.use('/public', express.static('public'));
 // app.use(bodyParser.urlencoded({ extended: false }));
 
-const secret = 'qsdjS12ozehdoIJ123DJOZJLDSCqsdeffdg123ER56SDFZedhWXojqshduzaohduihqsDAqsdq'; // Le mieux c'est de le mettre en variable d'environement
 // app.use(expressJwt({ secret: secret }).unless({ path: ['/', '/movies', '/movies-search', '/login', new RegExp('/movies.*/', 'i')] }));
-
 
 // Déclaration du fichier de views
 app.set('views', './views');
@@ -102,21 +101,6 @@ app.get('/movies', (req, res) => {
     });
 });
 
-// Middleware permetant de récupérer les params de la requête
-var urlencodedParser = bodyParser.urlencoded({ extended: false });      // Récupère le body d'un requête
-
-// app.post('/movies', urlencodedParser, (req, res) => {
-//     console.log(`Titre du film : ${req.body.movietitle}`);
-//     console.log(`Année de sortie : ${req.body.movieyear}`);
-//     const newMovie = { title: req.body.movietitle, year: req.body.movieyear };
-//     // Ancienne méthode
-//     // listMovies.push(newMovie);
-//     // Créé un nouveau tableau suivi du nouvel élément
-//     listMovies = [...listMovies, newMovie];
-//     console.log(listMovies);
-//     res.sendStatus(201);
-// });
-
 // upload.fields pour récupérer le body
 app.post('/movies', upload.fields([]), (req, res) => {
     if(!req.body) {
@@ -143,7 +127,15 @@ app.post('/movies', upload.fields([]), (req, res) => {
     }
 });
 
-// urlencodedParser permet d'obtenir la propriété req.body
+app.get('/movie-details/:id', (req, res) => {
+    const id = req.params.id;
+    console.log('coucou');
+    Movie.findById(id, (err, movie) => {
+        console.log(movie);
+        res.render('movie-details', { movieId: movie._id });
+    });
+});
+
 app.put('/movies-details/:id', upload.fields([]), (req, res) => {
     if (!req.body) {
         return res.sendStatus(500);
@@ -171,15 +163,9 @@ app.get('/', (req, res) =>{
     res.render('index');
 });
 
-app.get('/', (req, res) =>{
-    res.render('index');
-});
-
 app.get('/login', (req, res) => {
     res.render('login', {title: 'Connexion'});
 });
-
-const fakeUser = { email: 'testuser@testmail.fr', password: 'qsd' };
 
 app.post('/login', urlencodedParser, (req, res) => {
     console.log('login post ', req.body);
