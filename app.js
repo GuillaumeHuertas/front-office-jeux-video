@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const multer = require('multer');//  permet de poster des images
+// const methodOverride = require('method-override');
 
 const jwt = require('jsonwebtoken');
 // const expressJwt = require('express-jwt');
@@ -62,6 +63,9 @@ const Movie = mongoose.model('Movie', movieSchema);
 
 const PORT = 3000;
 let listMovies = [];
+
+// override with POST having ?_method=DELETE
+// app.use(methodOverride('_method'));
 
 // Déclaration des fihciers statics
 app.use('/public', express.static('public'));
@@ -129,14 +133,14 @@ app.post('/movies', upload.fields([]), (req, res) => {
 
 app.get('/movie-details/:id', (req, res) => {
     const id = req.params.id;
-    console.log('coucou');
     Movie.findById(id, (err, movie) => {
         console.log(movie);
-        res.render('movie-details', { movieId: movie._id });
+        res.render('movie-details', { movie: movie });
     });
 });
 
-app.put('/movies-details/:id', upload.fields([]), (req, res) => {
+app.post('/movie-details/:id', urlencodedParser, (req, res) => {
+    console.log("super coucou");
     if (!req.body) {
         return res.sendStatus(500);
     }
