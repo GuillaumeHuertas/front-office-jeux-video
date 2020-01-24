@@ -1,8 +1,13 @@
-let express = require('express');
-let Client = require('node-rest-client').Client;
+const express = require('express');
+const Client = require('node-rest-client').Client;
+const bodyParser = require('body-parser');
+const multer = require('multer');
 
 let router = express.Router();
 let client = new Client();
+
+let urlencodedParser = bodyParser.urlencoded({ extended: false });
+const upload = multer();
 
 let titleApp = "Liste Jeux Vidéos :";
 
@@ -25,12 +30,16 @@ router.get('/new', (req, res) => {
 
 
 
-router.post('/new', (req, res) => {
+router.post('/new', upload.fields([]), (req, res) => {
 
-   var args = {
+   let body = req.body;
+
+   console.log(body);
+
+   let args = {
       data: {
-         "titre": "Spyro 2",
-         "developpeur": "Insomniac Games",
+         "titre": `Mongo`,
+         "developpeur": body.dev,
          "editeur": "Activision",
          "statut": true,
          "note": 20,

@@ -7,6 +7,7 @@
             <!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
             <title>JeuxVideo :</title>
             <link rel="stylesheet" href="../public/style.css"/>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         </head>
 
         <body>
@@ -31,8 +32,6 @@
             </div>
         </body>
 
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
         <script>
             let resultDiv = document.querySelector('#results');         // Renvoi le résultat sur la balise HTML avec jQuery
             // let resultDiv = document.getElementById('results');         // Renvoi le résultat sur la balise HTML en natif
@@ -51,7 +50,7 @@
                 let i = 0;
 
                 results.forEach(element => {
-                    console.log(element);
+                    // console.log(element);
                     i ++;
                     let movieDiv = document.createElement('div');       // Créé des balises div pour chaque élément
                     let movieDev = document.createElement('div');
