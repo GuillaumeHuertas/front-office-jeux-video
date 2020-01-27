@@ -30,17 +30,18 @@ router.get('/new', (req, res) => {
 
 
 
-router.post('/new', upload.fields([]), (req, res) => {
+router.post('/new', urlencodedParser, (req, res) => {
 
    let body = req.body;
 
-   console.log(body);
+   console.log("titre : " + body.titre);
+   console.log("dev : " + body.developpeur);
 
    let args = {
       data: {
-         "titre": `Mongo`,
-         "developpeur": body.dev,
-         "editeur": "Activision",
+         "titre": body.titre,
+         "developpeur": body.developpeur,
+         "editeur": body.editeur,
          "statut": true,
          "note": 20,
          "description": "Meilleur remake de jeux de plateforme"
@@ -51,14 +52,11 @@ router.post('/new', upload.fields([]), (req, res) => {
 
    client.methods.postMethod(args, function (data, response) {
 
-      // parsed response body as js object
-      // console.log(data);
-      console.log("passe ici");
-      // raw response
-      // console.log(response);
+      console.log("POST sur le back-end");
+
+      return res.status(201).send(body);
 
    });
-   console.log("passe là");
 });
 
 router.get('/search', (req, res) => {

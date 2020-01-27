@@ -6,9 +6,11 @@
         <!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
         <!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
         <title>JeuxVideo</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="../public/style.css"/>
     </head>
     <body>
+
         <div class="central">
             <%- include('partials/header') %>
 
@@ -16,7 +18,7 @@
                 <%- include('partials/banner') %>
                 <h1>Ajouter un jeu vidéo à votre collection</h1>
                 <div id="form_new_jv">
-                    <form action="/jeuxVideos/new" method="post">
+                    <form action="/jeuxVideos/new" method="post" id="form_jv">
 <!--                        <ul>-->
                             <fieldset>
                                 <legend>Informations sur le Jeu</legend>
@@ -92,27 +94,67 @@
             </section>
             <%- include('partials/footer') %>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <script>
-            const form = document.querySelector('form');
-            form.addEventListener('submit', addMovie);
 
-            function addMovie(event) {
-                event.preventDefault();
+            $(document).ready(function(){
 
-                if(fetch) {
-                    fetch('/jeuxVideos/new', {
-                        method: 'POST',
-                        body: new FormData(form)
-                    })
-                        .then(checkStatus)
-                        .catch(function(error) {
-                            console.error('request failed', error);
-                        })
-                } else {
-                    // jQuery, XHR
-                }
-            }
+
+                $("#form_jv").submit(function (form) {
+
+                    // Indispensable sinon les éléments sont undifined
+                    form.preventDefault();
+
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            "titre": $("#name-jeux-video").val(),
+                            "developpeur": $("#dev").val(),
+                            "editeur": $("#editeur").val()
+                        },
+                        url: '/jeuxVideos/new',
+
+                        success: function(data) {
+                            console.log("POST sucess");
+                            location.href = "/jeuxVideos";
+                        },
+
+                        error: function(resultat, statut, erreur) {
+                          console.log("Erreur : " + erreur);
+                        },
+
+                        complete: function(resultat, statut) {
+                            console.log("Complete !");
+                        }
+                    });
+                })});
+
+
+
+
+            // const form = document.querySelector('form');
+            // form.addEventListener('submit', addMovie);
+            //
+            // function addMovie(event) {
+            //     event.preventDefault();
+            //
+            //     if(fetch) {
+            //         fetch('/jeuxVideos/new', {
+            //             method: 'POST',
+            //             body: new FormData(form)
+            //         })
+            //             .then(checkStatus)
+            //             .catch(function(error) {
+            //                 console.error('request failed', error);
+            //             })
+            //     } else {
+            //         // jQuery, XHR
+            //     }
+            // }
 
             function checkStatus(response) {
                 if(response.status >= 200 && response.status < 300) {
